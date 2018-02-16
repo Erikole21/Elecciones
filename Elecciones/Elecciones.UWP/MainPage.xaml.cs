@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,7 +22,11 @@ namespace Elecciones.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Elecciones.App());
+            string nombreArchivo = "eleccionesBD.sqlite";
+            string rutaCapeta = ApplicationData.Current.LocalFolder.Path;
+            string rutaBd = Path.Combine(rutaCapeta, nombreArchivo);
+
+            LoadApplication(new Elecciones.App(rutaBd));
         }
     }
 }

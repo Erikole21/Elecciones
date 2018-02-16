@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
 
 namespace Elecciones.Droid
 {
@@ -20,7 +21,12 @@ namespace Elecciones.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+
+            string nombreArchivo = "eleccionesBD.sqlite";
+            string rutaCapeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string rutaBd = Path.Combine(rutaCapeta, nombreArchivo);
+
+            LoadApplication(new App(rutaBd));
         }
     }
 }
