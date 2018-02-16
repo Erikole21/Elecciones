@@ -39,6 +39,10 @@ namespace Elecciones.ViewModels
             set
             {
                 candidatoSeleccionado = value;
+                if (candidatoSeleccionado != null)
+                {
+
+                }
                 OnPropertyChanged("CandidatoSeleccionado");
             }
         }

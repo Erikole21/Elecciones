@@ -11,7 +11,7 @@ namespace Elecciones
 	{
 		public MainPage()
 		{
-			InitializeComponent();
+			InitializeComponent();            
 		}
 	}
 }

@@ -11,7 +11,7 @@
         <ResourceDictionary>
             <DataTemplate x:Key="ItemCandidato">
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="1">
                         <Image Source="{Binding Foto}" BackgroundColor="Blue" Aspect="AspectFill" 
                                HeightRequest ="150" WidthRequest="150"/>
                         <StackLayout Orientation="Vertical">

@@ -5,11 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imagenes\Calle.jpg" />
+    <None Remove="Imagenes\Duque.jpg" />
     <None Remove="Imagenes\Fajardo.jpg" />
+    <None Remove="Imagenes\LLeras.jpg" />
+    <None Remove="Imagenes\Marta.jpg" />
+    <None Remove="Imagenes\Ordonez.jpg" />
+    <None Remove="Imagenes\Petro.jpg" />
+    <None Remove="Imagenes\Piedad.jpg" />
+    <None Remove="Imagenes\Timo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Imagenes\Calle.jpg" />
+    <EmbeddedResource Include="Imagenes\Duque.jpg" />
     <EmbeddedResource Include="Imagenes\Fajardo.jpg" />
+    <EmbeddedResource Include="Imagenes\LLeras.jpg" />
+    <EmbeddedResource Include="Imagenes\Marta.jpg" />
+    <EmbeddedResource Include="Imagenes\Ordonez.jpg" />
+    <EmbeddedResource Include="Imagenes\Petro.jpg" />
+    <EmbeddedResource Include="Imagenes\Piedad.jpg" />
+    <EmbeddedResource Include="Imagenes\Timo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
