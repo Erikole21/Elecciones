@@ -1,8 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elecciones.Views.PropuestasPage">
+             x:Class="Elecciones.Views.PropuestasPage"
+             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Propuestas">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="Item">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="1">
+                        <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold"/>
+                        <Label Margin="1" Text="{Binding Descripcion}"/>
+                        <Contr:HyperLinkLabel FontSize="12" TextColor="Blue" Text="{Binding Link}"  NavigateUri="{Binding Link}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <ListView Margin="3" ItemsSource="{Binding Propuestas}" ItemTemplate="{StaticResource Item}" HasUnevenRows="True"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

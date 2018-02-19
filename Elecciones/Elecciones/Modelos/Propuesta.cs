@@ -14,5 +14,7 @@ namespace Elecciones.Modelos
 
         public string Descripcion { get; set; }
 
+        public string Link { get; set; }
+
     }
 }

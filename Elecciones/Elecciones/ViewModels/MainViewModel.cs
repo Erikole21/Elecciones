@@ -29,24 +29,6 @@ namespace Elecciones.ViewModels
                 candidatos = value;
                 OnPropertyChanged("Candidatos");
             }
-        }
-
-        private Candidato candidatoSeleccionado;
-
-        public Candidato CandidatoSeleccionado
-        {
-            get { return candidatoSeleccionado; }
-            set
-            {
-                candidatoSeleccionado = value;
-                if (candidatoSeleccionado != null)
-                {
-
-                }
-                OnPropertyChanged("CandidatoSeleccionado");
-            }
-        }
-
-
+        }       
     }
 }

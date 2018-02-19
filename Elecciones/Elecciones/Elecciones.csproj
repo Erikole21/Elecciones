@@ -13,6 +13,7 @@
     <None Remove="Imagenes\Ordonez.jpg" />
     <None Remove="Imagenes\Petro.jpg" />
     <None Remove="Imagenes\Piedad.jpg" />
+    <None Remove="Imagenes\Propuestas.png" />
     <None Remove="Imagenes\Timo.jpg" />
   </ItemGroup>
 
@@ -25,12 +26,12 @@
     <EmbeddedResource Include="Imagenes\Ordonez.jpg" />
     <EmbeddedResource Include="Imagenes\Petro.jpg" />
     <EmbeddedResource Include="Imagenes\Piedad.jpg" />
+    <EmbeddedResource Include="Imagenes\Propuestas.png" />
     <EmbeddedResource Include="Imagenes\Timo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
   </ItemGroup>
 

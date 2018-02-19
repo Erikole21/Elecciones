@@ -23,13 +23,8 @@ namespace Elecciones.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
-
-            string nombreArchivo = "eleccionesBD.sqlite";
-            string rutaCapeta = Path.Combine(Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library", "Databases");
-            string rutaBd = Path.Combine(rutaCapeta, nombreArchivo);
-
-            LoadApplication(new App(rutaBd));
+            global::Xamarin.Forms.Forms.Init();            
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }

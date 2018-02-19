@@ -20,13 +20,9 @@ namespace Elecciones.Droid
 
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.Forms.Forms.Init(this, bundle);            
 
-            string nombreArchivo = "eleccionesBD.sqlite";
-            string rutaCapeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string rutaBd = Path.Combine(rutaCapeta, nombreArchivo);
-
-            LoadApplication(new App(rutaBd));
+            LoadApplication(new App());
         }
     }
 }

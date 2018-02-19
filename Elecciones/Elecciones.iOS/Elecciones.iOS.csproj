@@ -125,9 +125,6 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.3</Version>
     </PackageReference>
-    <PackageReference Include="sqlite-net-pcl">
-      <Version>1.4.118</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -136,5 +133,8 @@
       <Project>{3A69D33F-B4F2-4EA1-AB5B-CA76BE2E547C}</Project>
       <Name>Elecciones</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Propuestas.png" />
   </ItemGroup>
 </Project>

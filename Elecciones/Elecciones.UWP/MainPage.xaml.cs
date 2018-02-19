@@ -20,13 +20,8 @@ namespace Elecciones.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
-
-            string nombreArchivo = "eleccionesBD.sqlite";
-            string rutaCapeta = ApplicationData.Current.LocalFolder.Path;
-            string rutaBd = Path.Combine(rutaCapeta, nombreArchivo);
-
-            LoadApplication(new Elecciones.App(rutaBd));
+            this.InitializeComponent();           
+            LoadApplication(new Elecciones.App());
         }
     }
 }

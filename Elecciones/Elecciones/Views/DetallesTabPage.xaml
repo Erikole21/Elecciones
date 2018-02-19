@@ -1,9 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elecciones.Views.DetallesTabPage">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+             x:Class="Elecciones.Views.DetallesTabPage"
+             xmlns:Contr="clr-namespace:Elecciones.Controles">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ItemCargo">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="1">
+                        <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold"/>
+                        <Label Margin="1" Text="{Binding Descripcion}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="propuestas" Order="Primary" Icon="Propuestas.png"  Clicked="propuestas_Click" Text="Propuestas" Priority="0" />
+    </TabbedPage.ToolbarItems>
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Biografía" Padding="5">
+        <StackLayout Orientation="Horizontal">
+            <Image Source="{Binding Candidato.Foto}" Aspect="AspectFill" 
+                               HeightRequest ="150" WidthRequest="70"/>
+            <ScrollView>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Candidato.Nombre}" FontSize="15" FontAttributes="Bold"/>
+                    <Label Margin="1" Text="{Binding Biografia}"/>
+                    <Contr:HyperLinkLabel FontSize="12" TextColor="Blue" Text="Fuente"  NavigateUri="{Binding Url}" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Cargos" Padding="5">
+        <ListView ItemsSource="{Binding Cargos}" ItemTemplate="{StaticResource ItemCargo}" HasUnevenRows="True"/>
+    </ContentPage>
+    <ContentPage Title="Estudios" Padding="5">
+        <ListView ItemsSource="{Binding Estudios}" ItemTemplate="{StaticResource ItemCargo}" HasUnevenRows="True"/>
+    </ContentPage>
 </TabbedPage>

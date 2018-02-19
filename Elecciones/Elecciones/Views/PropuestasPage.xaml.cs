@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elecciones.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,19 @@ using Xamarin.Forms.Xaml;
 
 namespace Elecciones.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PropuestasPage : ContentPage
-	{
-		public PropuestasPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PropuestasPage : ContentPage
+    {
+        public PropuestasPage()
+        {
+            InitializeComponent();
+        }
+
+        public PropuestasPage(Candidato candidato)
+        {
+            InitializeComponent();
+            BindingContext = new ViewModels.PropuestasViewModel(candidato);
+
+        }      
+    }
 }

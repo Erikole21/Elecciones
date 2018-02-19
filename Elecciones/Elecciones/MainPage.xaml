@@ -12,8 +12,8 @@
             <DataTemplate x:Key="ItemCandidato">
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Margin="1">
-                        <Image Source="{Binding Foto}" BackgroundColor="Blue" Aspect="AspectFill" 
-                               HeightRequest ="150" WidthRequest="150"/>
+                        <Image Source="{Binding Foto}" Aspect="AspectFill" 
+                               HeightRequest ="120" WidthRequest="120"/>
                         <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Nombre}" FontSize="15" FontAttributes="Bold"/>
                             <Label Text="{Binding Slogan}"/>
@@ -26,13 +26,13 @@
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid Margin="8,10,5,5">
+    <Grid Margin="8,8,5,2">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="80" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Label Text="Candidatos"  Style="{StaticResource Titulo}" />
-        <ListView Grid.Row="1" HasUnevenRows="True" ItemTemplate="{StaticResource ItemCandidato}" SelectedItem="{Binding CandidatoSeleccionado, Mode=TwoWay}" ItemsSource="{Binding Candidatos}"/>       
+        <ListView Grid.Row="1" HasUnevenRows="True" ItemTemplate="{StaticResource ItemCandidato}" ItemSelected="listView_ItemSelected" ItemsSource="{Binding Candidatos}"/>       
     </Grid>
 </ContentPage>

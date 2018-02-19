@@ -7,7 +7,7 @@
         <!-- Application resource dictionary -->
         <ResourceDictionary>
             <Style x:Key="Titulo" TargetType="Label">
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="22"/>
                 <Setter Property="FontAttributes" Value="Bold"/>                
             </Style>
         </ResourceDictionary>

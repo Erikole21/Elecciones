@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Elecciones.Modelos
 {
@@ -11,6 +12,8 @@ namespace Elecciones.Modelos
         public string Descripcion { get; set; }
 
         public TipoDetalle TipoDetalle { get; set; }
+
+        public string Titulo { get; set; }        
 
     }
 }
