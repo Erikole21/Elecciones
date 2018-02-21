@@ -3,6 +3,7 @@ using Elecciones.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Elecciones.ViewModels
 {
@@ -24,6 +25,17 @@ namespace Elecciones.ViewModels
         {
             this.Candidato = _candidato;
             CargarInformacion();
+            AsignarIdsPublicidad();
+        }
+
+        private void AsignarIdsPublicidad()
+        {
+            if (Device.RuntimePlatform == Device.iOS)
+                IdBanner = "ca-app-pub-2325431808910219/6922338445";
+            else if (Device.RuntimePlatform == Device.Android)
+                IdBanner = "ca-app-pub-2325431808910219/4844213284";
+            else if (Device.RuntimePlatform == Device.UWP)
+                IdBanner = "1100018258";
         }
 
         private void CargarInformacion()
@@ -40,6 +52,18 @@ namespace Elecciones.ViewModels
             {
                 propuestas = value;
                 OnPropertyChanged("Propuestas");
+            }
+        }
+
+        private string idBanner;
+
+        public string IdBanner
+        {
+            get { return idBanner; }
+            set
+            {
+                idBanner = value;
+                OnPropertyChanged("IdBanner");
             }
         }
 

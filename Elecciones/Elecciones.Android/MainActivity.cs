@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Android.Gms.Ads;
 
 namespace Elecciones.Droid
 {
@@ -19,10 +20,10 @@ namespace Elecciones.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);            
-
             LoadApplication(new App());
+
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-2325431808910219~1757571865");
         }
     }
 }

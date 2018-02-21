@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Elecciones"
              xmlns:ViewModels="clr-namespace:Elecciones.ViewModels"
-             x:Class="Elecciones.MainPage">
+             xmlns:Contr="clr-namespace:Elecciones.Controles"
+             x:Class="Elecciones.MainPage" Title="Candidatos">
     <ContentPage.BindingContext>
         <ViewModels:MainViewModel/>
     </ContentPage.BindingContext>
@@ -26,13 +27,12 @@
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid Margin="8,8,5,2">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+    <Grid Margin="8,8,5,2" RowSpacing="0">
+        <Grid.RowDefinitions>            
             <RowDefinition Height="*" />
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
-        <Label Text="Candidatos"  Style="{StaticResource Titulo}" />
-        <ListView Grid.Row="1" HasUnevenRows="True" ItemTemplate="{StaticResource ItemCandidato}" ItemSelected="listView_ItemSelected" ItemsSource="{Binding Candidatos}"/>       
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>        
+        <ListView  HasUnevenRows="True" ItemTemplate="{StaticResource ItemCandidato}" ItemSelected="listView_ItemSelected" ItemsSource="{Binding Candidatos}"/>
+        <Contr:AdControlView Grid.Row="1" AdUnitId="{Binding IdBanner}" />
     </Grid>
 </ContentPage>

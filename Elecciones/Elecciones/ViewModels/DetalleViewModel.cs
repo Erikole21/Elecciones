@@ -25,6 +25,17 @@ namespace Elecciones.ViewModels
         {
             this.Candidato = _candidato;
             CargarInformacion();
+            AsignarIdsPublicidad();
+        }
+
+        private void AsignarIdsPublicidad()
+        {
+            if (Device.RuntimePlatform == Device.iOS)
+                IdBanner = "ca-app-pub-2325431808910219/4344276564";
+            else if (Device.RuntimePlatform == Device.Android)
+                IdBanner = "ca-app-pub-2325431808910219/4297418371";
+            else if (Device.RuntimePlatform == Device.UWP)
+                IdBanner = "1100018257";
         }
 
         private void CargarInformacion()
@@ -48,6 +59,18 @@ namespace Elecciones.ViewModels
             {
                 estudios = value;
                 OnPropertyChanged("Estudios");
+            }
+        }
+
+        private string idBanner;
+
+        public string IdBanner
+        {
+            get { return idBanner; }
+            set
+            {
+                idBanner = value;
+                OnPropertyChanged("IdBanner");
             }
         }
 

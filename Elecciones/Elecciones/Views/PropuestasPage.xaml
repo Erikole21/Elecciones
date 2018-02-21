@@ -17,12 +17,13 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <ListView Margin="3" ItemsSource="{Binding Propuestas}" ItemTemplate="{StaticResource Item}" HasUnevenRows="True"/>
+            <Contr:AdControlView Grid.Row="1" AdUnitId="{Binding IdBanner}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

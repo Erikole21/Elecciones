@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 
 using Foundation;
+using Google.MobileAds;
 using UIKit;
 
 namespace Elecciones.iOS
@@ -25,7 +26,7 @@ namespace Elecciones.iOS
         {
             global::Xamarin.Forms.Forms.Init();            
             LoadApplication(new App());
-
+            MobileAds.Configure("ca-app-pub-2325431808910219~3569841822");
             return base.FinishedLaunching(app, options);
         }
     }
