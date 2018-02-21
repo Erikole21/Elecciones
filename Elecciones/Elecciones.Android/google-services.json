@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "865980878549",
+    "firebase_url": "https://elecciones-bf635.firebaseio.com",
+    "project_id": "elecciones-bf635",
+    "storage_bucket": "elecciones-bf635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865980878549:android:98b68a4e34e733fb",
+        "android_client_info": {
+          "package_name": "com.erikole.Elecciones"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865980878549-t9h2pf4eq4kem5rcaa3oertck9cgkhqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWZP7_spb3HR0Zp__EZbjp5GFjag6e9OA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

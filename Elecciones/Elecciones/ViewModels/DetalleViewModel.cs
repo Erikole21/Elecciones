@@ -31,11 +31,23 @@ namespace Elecciones.ViewModels
         private void AsignarIdsPublicidad()
         {
             if (Device.RuntimePlatform == Device.iOS)
+            {
                 IdBanner = "ca-app-pub-2325431808910219/4344276564";
+                IdBannerCargos = "ca-app-pub-2325431808910219/4541347999";
+                IdBannerEstudios = "ca-app-pub-2325431808910219/5358292564";
+            }
             else if (Device.RuntimePlatform == Device.Android)
+            {
                 IdBanner = "ca-app-pub-2325431808910219/4297418371";
+                IdBannerEstudios = "ca-app-pub-2325431808910219/7597443093";
+                IdBannerCargos = "ca-app-pub-2325431808910219/9601677956";
+            }
             else if (Device.RuntimePlatform == Device.UWP)
+            {
                 IdBanner = "1100018257";
+                IdBannerEstudios = "1100018336";
+                IdBannerCargos = "1100018337";
+            }
         }
 
         private void CargarInformacion()
@@ -74,6 +86,29 @@ namespace Elecciones.ViewModels
             }
         }
 
+        private string idBannerCargos;
+
+        public string IdBannerCargos
+        {
+            get { return idBannerCargos; }
+            set
+            {
+                idBannerCargos = value;
+                OnPropertyChanged("IdBannerCargos");
+            }
+        }
+
+        private string idBannerEstudios;
+
+        public string IdBannerEstudios
+        {
+            get { return idBannerEstudios; }
+            set
+            {
+                idBannerEstudios = value;
+                OnPropertyChanged("IdBannerEstudios");
+            }
+        }
 
         private List<Detalle> cargos;
 

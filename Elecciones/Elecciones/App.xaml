@@ -10,6 +10,14 @@
                 <Setter Property="FontSize" Value="22"/>
                 <Setter Property="FontAttributes" Value="Bold"/>                
             </Style>
+            <DataTemplate x:Key="ItemCargo">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="1">
+                        <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold"/>
+                        <Label Margin="1" Text="{Binding Descripcion}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

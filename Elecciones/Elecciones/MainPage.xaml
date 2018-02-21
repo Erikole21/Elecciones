@@ -27,7 +27,7 @@
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid Margin="8,8,5,2" RowSpacing="0">
+    <Grid  RowSpacing="0">
         <Grid.RowDefinitions>            
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />

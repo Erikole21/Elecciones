@@ -15,13 +15,20 @@ namespace Elecciones.Views
     {
         public DetallesTabPage()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         public DetallesTabPage(Candidato candidato)
         {
             InitializeComponent();
-            BindingContext = new ViewModels.DetalleViewModel(candidato);
+            ViewModels.DetalleViewModel viewModel = new ViewModels.DetalleViewModel(candidato);
+            BindingContext = viewModel;
+            BiografiaPage biografia = new BiografiaPage(viewModel);
+            this.Children.Add(biografia);
+            CargosPage cargos = new CargosPage(viewModel);
+            this.Children.Add(cargos);
+            EstudiosPage estudios = new EstudiosPage(viewModel);
+            this.Children.Add(estudios);
         }
 
         private void propuestas_Click(object sender, EventArgs e)

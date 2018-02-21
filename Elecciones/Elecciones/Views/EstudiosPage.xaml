@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Contr="clr-namespace:Elecciones.Controles"
+             x:Class="Elecciones.Views.EstudiosPage" Title="Estudios">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="4">
+                <ListView ItemsSource="{Binding Estudios}" ItemTemplate="{StaticResource ItemCargo}" HasUnevenRows="True"/>
+            </StackLayout>
+            <Contr:AdControlView Grid.Row="1" AdUnitId="{Binding IdBannerEstudios}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

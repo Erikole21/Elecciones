@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="33149Erikole.Elecciones" Publisher="CN=3533419D-2C6F-40F5-A458-BC16A14044B8" Version="1.1.0.0" />
+  <Identity Name="33149Erikole.Elecciones" Publisher="CN=3533419D-2C6F-40F5-A458-BC16A14044B8" Version="1.1.1.0" />
   <mp:PhoneIdentity PhoneProductId="6f05c6cd-a33c-4310-a765-d8e1643de5af" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Elecciones</DisplayName>

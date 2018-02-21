@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elecciones.Views.BiografiaPage"
+             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Biografía">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Padding="4">
+                <Image Source="{Binding Candidato.Foto}" Aspect="AspectFill" 
+                               HeightRequest ="150" WidthRequest="70"/>
+                <ScrollView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Candidato.Nombre}" FontSize="15" FontAttributes="Bold"/>
+                        <Label Margin="1" Text="{Binding Biografia}"/>
+                        <Contr:HyperLinkLabel FontSize="12" TextColor="Blue" Text="Fuente"  NavigateUri="{Binding Url}" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <Contr:AdControlView Grid.Row="1" AdUnitId="{Binding IdBanner}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
