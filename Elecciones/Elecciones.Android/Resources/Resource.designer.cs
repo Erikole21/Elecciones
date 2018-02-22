@@ -3958,27 +3958,6 @@ namespace Elecciones.Droid
 			// aapt resource value: 0x7f070007
 			public const int decline = 2131165191;
 			
-			// aapt resource value: 0x7f07005b
-			public const int default_web_client_id = 2131165275;
-			
-			// aapt resource value: 0x7f07005c
-			public const int firebase_database_url = 2131165276;
-			
-			// aapt resource value: 0x7f070059
-			public const int gcm_defaultSenderId = 2131165273;
-			
-			// aapt resource value: 0x7f07005d
-			public const int google_api_key = 2131165277;
-			
-			// aapt resource value: 0x7f07005a
-			public const int google_app_id = 2131165274;
-			
-			// aapt resource value: 0x7f07005e
-			public const int google_crash_reporting_api_key = 2131165278;
-			
-			// aapt resource value: 0x7f07005f
-			public const int google_storage_bucket = 2131165279;
-			
 			// aapt resource value: 0x7f07001b
 			public const int mr_button_content_description = 2131165211;
 			

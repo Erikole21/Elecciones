@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Elecciones"
-             xmlns:ViewModels="clr-namespace:Elecciones.ViewModels"
-             xmlns:Contr="clr-namespace:Elecciones.Controles"
+             xmlns:Mod="clr-namespace:Elecciones.ViewModels;assembly=Elecciones"
+             xmlns:Contr="clr-namespace:Elecciones.Controles;assembly=Elecciones"
              x:Class="Elecciones.MainPage" Title="Candidatos">
     <ContentPage.BindingContext>
-        <ViewModels:MainViewModel/>
+        <Mod:MainViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>

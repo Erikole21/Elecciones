@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Elecciones.Views.PropuestasPage"
-             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Propuestas">    
+             xmlns:Contr="clr-namespace:Elecciones.Controles;assembly=Elecciones" Title="Propuestas">    
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>

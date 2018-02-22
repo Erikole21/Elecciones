@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Elecciones.Views.EscandalosPage"
-             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Escandalos">
+             xmlns:Contr="clr-namespace:Elecciones.Controles;assembly=Elecciones" Title="Escandalos">
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
