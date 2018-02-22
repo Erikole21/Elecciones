@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elecciones.Views.PropuestasPage"
-             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Propuestas">    
+             x:Class="Elecciones.Views.EscandalosPage"
+             xmlns:Contr="clr-namespace:Elecciones.Controles" Title="Escandalos">
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ListView Margin="3" ItemsSource="{Binding Propuestas}" ItemTemplate="{StaticResource ItemLink}" HasUnevenRows="True"/>
+            <ListView Margin="3" ItemsSource="{Binding Escandalos}" ItemTemplate="{StaticResource ItemLink}" HasUnevenRows="True"/>
             <Contr:AdControlView Grid.Row="1" AdUnitId="{Binding IdBanner}" />
         </Grid>
     </ContentPage.Content>

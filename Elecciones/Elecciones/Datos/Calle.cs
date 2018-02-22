@@ -26,6 +26,53 @@ namespace Elecciones.Datos
             };
         }
 
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("En medio del escándalo de evasión fiscal conocido como 'Papeles de Panamá', que involucra a más de 140 personalidades del mundo, el jefe negociador del Gobierno en el proceso de paz, Humberto de la Calle, reconoció a través de un comunicado de prensa que tuvo una sociedad familiar");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 6,
+                Titulo = "Humberto De la Calle admite haber tenido sociedad en Panamá",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elpais.com.co/colombia/humberto-de-la-calle-admite-haber-tenido-sociedad-en-panama.html"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("Humberto de la Calle pretende suceder a Juan Manuel Santos. Ha presentado su candidatura. Quiere dirigir el Estado colombiano y arrimarlo al carro venezolano, con su cortejo de corrupción, crímenes y desgracias sociales");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 6,
+                Titulo = "Las doce grandes mentiras de Humberto de la Calle",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elmundo.com/noticia/Las-doce-grandes-mentiras-de-Humberto-de-la-Calle/360117"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("Los jefes negociadores del Gobierno con las guerrillas FARC y ELN, Humberto de la Calle y Frank Pearl, respectivamente, se vieron involucrados este jueves en el escándalo de los papeles de panama");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 6,
+                Titulo = "Humberto de la Calle y Frank Pearl, vinculados en papeles de Panama",
+                Descripcion = sb.ToString(),
+                Link = "http://www.radiored.com.co/noticias/humberto-de-la-calle-y-frank-pearl-vinculados-a-papeles-de-panama/"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Se invirtieron 40 mil millones de pesos en la consulta liberal en la que se escogió a Humberto de la Calle Lombana como el candidato presidencial por ese partido.");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 6,
+                Titulo = "Polémica por dineros invertidos en la consulta liberal",
+                Descripcion = sb.ToString(),
+                Link = "https://canal1.com.co/shows-vivo/polemica-por-dineros-invertidos-en-la-consulta-liberal-en-la-que-gano-humberto-de-la-calle/"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

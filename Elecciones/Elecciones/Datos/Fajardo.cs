@@ -110,7 +110,55 @@ namespace Elecciones.Datos
             return estudios;
         }
 
-        public static List<Propuesta> GetPropuestas()
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Los embargos se hacen dentro de un proceso de investigación por presuntos sobrecostos en el equipamiento y construcción de estaciones de Policía en varios municipios de Antioquia.");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 1,
+                Titulo = "Contraloría embarga dos bienes a Sergio Fajardo",
+                Descripcion = sb.ToString(),
+                Link = "http://www.eltiempo.com/colombia/medellin/contraloria-embarga-dos-bienes-a-sergio-fajardo-133090"
+            };            
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("Sergio Fajardo niega que haya violado topes a gastos de funcionamiento. ");
+            sb.AppendLine("El político, cuyo nombre suena como candidato a la presidencia, dice que hay mentiras y trampas en los señalamientos. ");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 1,
+                Titulo = "Malos manejos fiscales en administración de Sergio Fajardo",
+                Descripcion = sb.ToString(),
+                Link = "http://caracol.com.co/emisora/2016/07/26/medellin/1469567624_383075.html"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("Luis Pérez, el próximo gobernador de Antioquia, comienza a destapar la olla podrida del mandatario de turno.");            
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 1,
+                Titulo = "Los cuestionados contratos de Sergio Fajardo",
+                Descripcion = sb.ToString(),
+                Link = "https://www.las2orillas.co/los-cuestionados-contratos-de-sergio-fajardo/"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Sergio Fajardo desmiente contratos con empresas que aportaron a su campaña en 2011.");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 1,
+                Titulo = "Los cuestionados contratos de Sergio Fajardo",
+                Descripcion = sb.ToString(),
+                Link = "https://www.bluradio.com/nacion/sergio-fajardo-desmiente-contratos-con-empresas-que-aportaron-su-campana-en-2011-135184"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            return escandalos;
+        }
+
+            public static List<Propuesta> GetPropuestas()
         {
             List<Propuesta> propuestas = new List<Propuesta>();
             StringBuilder sb = new StringBuilder();

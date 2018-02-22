@@ -26,6 +26,23 @@ namespace Elecciones.Datos
             };
         }
 
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Piden a Marta Lucía Ramírez asumir su responsabilidad en caso Santoyo..");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "Piden a Marta Lucía Ramírez asumir su responsabilidad",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/politica/piden-marta-lucia-ramirez-asumir-su-responsabilidad-cas-articulo-477177"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

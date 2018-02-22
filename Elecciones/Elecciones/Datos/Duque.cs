@@ -27,6 +27,64 @@ namespace Elecciones.Datos
             };
         }
 
+
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Iván Duque estuvo presente en reunión de Zuluaga con 'Duda' Mendoca. El senador del Centro Democrático aseguró que allí no se habló de dinero y que fue invitado por el excandidato presidencial.");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Corrupción en el uribismo: Iván Duque estuvo presente en reunión",
+                Descripcion = sb.ToString(),
+                Link = "http://caracol.com.co/radio/2017/02/02/politica/1486074091_494614.html"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("El exministro y dirigente del Centro Democrático, Fernando Londoño, arremetió este viernes en su programa radial contra el senador");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Pelea en el uribismo: Fernando Londoño arremete contra Iván Duque",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elcolombiano.com/colombia/politica/fernando-londono-arremetio-contra-ivan-duque-MY7177916"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("Desde que llegó al Congreso, Iván Duque, ha sido considerado como el favorito de Álvaro Uribe y del mismo modo como una de las revelaciones de la clase política. Paradójicamente, el hecho de llegar al Congreso sin ser conocido terminó por ser una virtud en la Colombia de hoy");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Iván Duque, el hombre de Uribe",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/perfil-de-ivan-duque-candidato-del-centro-democratico-elecciones-2018/550159"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("El candidato presidencial del Centro Democrático defendió al expresidente quien, a través de las redes sociales, ha sido acusado del abuso sexual que confesó la periodista");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Me hago moler por la honorabilidad de Álvaro Uribe",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/politica/me-hago-moler-por-la-honorabilidad-de-alvaro-uribe-ivan-duque-articulo-735347"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("La degradación de la contienda electoral no es el único daño que esta corriente le ha infligido a la democracia en los mandatos de Uribe se han descubierto 27 escándalos de corrupción");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Uribe: seis campañas, seis escándalos",
+                Descripcion = sb.ToString(),
+                Link = "https://www.semana.com/opinion/articulo/leon-valencia-opinion-sobre-la-propuesta-de-alvaro-uribe-de-ley-anticorrupcion/519521"
+            };
+            escandalos.Add(escandalo4);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

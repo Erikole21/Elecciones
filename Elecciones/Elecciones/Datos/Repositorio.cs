@@ -62,6 +62,34 @@ namespace Elecciones.Datos
             }
         }
 
+        public static List<Propuesta> GetEscandalos(short idCandidato)
+        {
+            switch (idCandidato)
+            {
+                case 1:
+                    return Fajardo.GetEscandalos();
+                case 2:
+                    return Petro.GetEscandalos();
+                case 3:
+                    return LLeras.GetEscandalos();
+                case 4:
+                    return Duque.GetEscandalos();
+                case 5:
+                    return Ordonez.GetEscandalos();
+                case 6:
+                    return Calle.GetEscandalos();
+                case 7:
+                    return Marta.GetEscandalos();
+                case 8:
+                    return Timo.GetEscandalos();
+                case 9:
+                    return Piedad.GetEscandalos();
+                default:
+                    return null;
+            }
+        }
+
+
         public static List<Propuesta> GetPropuestas(short idCandidato)
         {
             switch (idCandidato)

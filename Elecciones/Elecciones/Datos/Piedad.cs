@@ -24,7 +24,64 @@ namespace Elecciones.Datos
             };
         }
 
-        public static List<Detalle> GetEstudios()
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("La Procuraduría informó que cuenta con las pruebas suficientes para iniciar una investigación formal contra la senadora por sus supuestos vínculos con las Farc. Formulan cargos contra Piedad Córdoba por 'Farcpolítica' La senadora liberal");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 9,
+                Titulo = "Formulan cargos contra Piedad Córdoba por 'Farcpolítica'",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/formulan-cargos-contra-piedad-cordoba-farcpolitica/115454-3"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("La Procuraduría deberá pagar a la excongresista una indemnización por daños y perjuicios. La suma podría superar los $1.000 millones.");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 9,
+                Titulo = "$1.000 millones de indemnización pagará Procuraduría a Piedad",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/mas-de-1000-millones-de-indemnizacion-pagara-procuraduria-a-piedad-cordoba/486391"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("En el primer Congreso Binacional de Mujeres que se desarrolla en el estado de Táchira en Venezuela participó la líder Piedad Córdoba. Sus palabras han generado diferentes posturas en las redes sociales.");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 9,
+                Titulo = "Polémica por declaraciones de Piedad Córdoba en Venezuela",
+                Descripcion = sb.ToString(),
+                Link = "https://www.publimetro.co/co/actualidad/2017/04/08/polemica-declaraciones-piedad-cordoba-venezuela.html"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Piedad Córdoba dijo que aunque Alejandro Ordóñez le hizo “tanto daño” al sacarla del Congreso, ella no le guarda rencor. “No lo odio porque el odio amarra, no deja ver hacia adelante, no deja ver el futuro”");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 9,
+                Titulo = "Así fue el 'agarrón' entre Ordóñez y Piedad en un foro sobre corrupción",
+                Descripcion = sb.ToString(),
+                Link = "https://www.pulzo.com/elecciones-2018/agarron-entre-alejandro-ordonez-piedad-cordoba-foro-sobre-corrupcion/PP439006"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("La W Radio pudo establecer que Camilo Castro Córdoba, hijo de la ex senadora Piedad Córdoba fue detenido en la ciudad de Medellín, por conducir una camioneta que había sido reportada como hurtada el año pasado en la ciudad de Cali.");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 9,
+                Titulo = "Capturan al hijo de Piedad Córdoba por conducir camioneta robada",
+                Descripcion = sb.ToString(),
+                Link = "https://www.wradio.com.co/noticias/actualidad/8203capturan-al-hijo-de-piedad-cordoba-por-conducir-camioneta-robada/20160204/nota/3052837.aspx"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            return escandalos;
+        }
+
+            public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();
             Detalle estudio1 = new Detalle()

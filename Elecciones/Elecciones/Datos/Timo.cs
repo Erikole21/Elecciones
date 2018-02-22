@@ -24,6 +24,85 @@ namespace Elecciones.Datos
             };
         }
 
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Abucheos y agresiones contra timochenko en quindio y valle.");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Abucheos contra TimoChenko",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/las-dos-caras-de-los-abucheos-y-agresiones-contra-timochenko-en-quindio-y-valle/556481"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("Los investigadores del CNMH recopilaron aproximadamente 30 casos de reclutamiento infantil entre 1997 y 1999, cuando 'Timochenko' era jefe de personal.");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Informe implica a Timochenko en reclutamiento infantil de las Farc",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elpais.com.co/proceso-de-paz/informe-implica-a-timochenko-en-reclutamiento-infantil-de-las-farc.html"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("Los investigadores del CNMH recopilaron aproximadamente 30 casos de reclutamiento infantil entre 1997 y 1999, cuando 'Timochenko' era jefe de personal.");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Informe implica a Timochenko en reclutamiento infantil de las Farc",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elpais.com.co/proceso-de-paz/informe-implica-a-timochenko-en-reclutamiento-infantil-de-las-farc.html"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Fue condenado a 40 años de prisión por el atentado contra una embarcación que viajaba por el río Ariari, a la altura del municipio de Puerto Rico, Meta;..");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Este es el prontuario delictivo de 'Timochenko' ",
+                Descripcion = sb.ToString(),
+                Link = "http://www.vanguardia.com/colombia/311819-este-es-el-prontuario-delictivo-de-timochenko"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("Después de la muerte de alias 'Alfonso Cano' en 2011, 'Timochenko' asumió como número uno de las Farc, cerebro del manejo de la coca y jefe de operaciones... ");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Este es el prontuario de 'Timochenko', ahora candidato presidencial",
+                Descripcion = sb.ToString(),
+                Link = "http://www.noticiasrcn.com/nacional-pais/este-el-prontuario-timochenko-ahora-candidato-presidencial"
+            };
+            escandalos.Add(escandalo4);
+            sb.Clear();
+            sb.AppendLine("El presidente de la Cámara respondió así al candidato presidencial de las Farc quien dijo que el congresista defiende a los responsables intelectuales del asesinato de su padre.");
+            Propuesta escandalo5 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "Timochenko es de ese tipo de personas que fusilan moralmente ",
+                Descripcion = sb.ToString(),
+                Link = "https://www.lafm.com.co/politica/timochenko-es-de-ese-tipo-de-personas-que-fusilan-moralmente-rodrigo-lara/"
+            };
+            escandalos.Add(escandalo5);
+            sb.Clear();
+            sb.AppendLine("Todo indica que hemos recibido un muy duro golpe que nos afecta internamente.");
+            sb.AppendLine("Todos los que tengan objetivos deben entrar a actuar lo más pronto posible!.");
+            sb.AppendLine("Esa orden de arreciar en sus acciones violentas la dio a sus hombres el jefe de las Farc, Rodrigo Londoño Echeverri.");
+            Propuesta escandalo6 = new Propuesta()
+            {
+                Idcandidato = 8,
+                Titulo = "El correo de 'Timochenko' que desató ola de atentados",
+                Descripcion = sb.ToString(),
+                Link = "http://www.eltiempo.com/archivo/documento/CMS-15985419"
+            };
+            escandalos.Add(escandalo6);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

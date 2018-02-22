@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Contr="clr-namespace:Elecciones.Controles"
              x:Class="Elecciones.App">
     <Application.Resources>
-
         <!-- Application resource dictionary -->
         <ResourceDictionary>
             <Style x:Key="Titulo" TargetType="Label">
@@ -15,6 +15,15 @@
                     <StackLayout Orientation="Vertical" Margin="1">
                         <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold"/>
                         <Label Margin="1" Text="{Binding Descripcion}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ItemLink">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="1">
+                        <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold"/>
+                        <Label Margin="1" Text="{Binding Descripcion}"/>
+                        <Contr:HyperLinkLabel FontSize="12" TextColor="Blue" Text="{Binding Link}"  NavigateUri="{Binding Link}" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

@@ -191,4 +191,10 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sondeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Escandalos.png" />
+  </ItemGroup>
 </Project>

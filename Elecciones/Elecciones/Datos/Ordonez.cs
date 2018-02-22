@@ -27,6 +27,73 @@ namespace Elecciones.Datos
             };
         }
 
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Aunque su aspiración va por firmas y no depende de partidos, el exprocurador se está viendo en aprietos para explicar el nombramiento de la esposa del magistrado Leonidas Bustos en un alto cargo");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "El escándalo de la justicia y la candidatura de Ordóñez",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/politica/el-escandalo-de-la-justicia-y-la-candidatura-de-ordonez-articulo-708950"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("Desde la dirección del Ministerio Público, Alejandro Ordóñez libró recias batallas contra decisiones de las Altas Cortes y del mismo Gobierno.");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "Las polémicas de Alejandro Ordóñez en la Procuraduría",
+                Descripcion = sb.ToString(),
+                Link = "http://www.eltiempo.com/politica/gobierno/las-polemicas-de-alejandro-ordonez-en-la-procuraduria-55225"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("Ordoñez lo incomodaron señalamientos del comunicador sobre presuntos favores desde la Procuraduría General de la Nación en momentos en los que este la lideraba (2010), para nombrar a personas vinculadas a varios de los señalados en el escándalo de corrupción.");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "Rifirrafe entre Ordoñez y Néstor Morales por caso de corrupción",
+                Descripcion = sb.ToString(),
+                Link = "http://www.elcolombiano.com/colombia/politica/alejandro-ordonez-y-nestor-morales-discutieron-por-caso-de-corrupcion-en-la-corte-suprema-EX7132341"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Ordóñez modificó esquema de seguridad de la Procuraduría para tener protección por cuatro años. La norma que cambió preveía que la escolta de los exprocuradores se reducía al 75% por un año y que su continuidad requería de un estudio de seguridad.");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "Escándalo seguridad Alejandro Ordóñez",
+                Descripcion = sb.ToString(),
+                Link = "http://caracol.com.co/radio/2016/10/27/nacional/1477586805_076772.html"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("Exprocurador Ordóñez archivó indagaciones contra fichas de Odebrecht Ordóñez sepultó indagaciones contra fichas de Odebrecht. Al desempolvar expedientes, la procuraduría de Fernando Carrillo acaba de descubrir que para la entidad que hoy dirige");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "Exprocurador Ordóñez archivó indagaciones contra fichas de Odebrecht",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/exprocurador-ordonez-archivo-indagaciones-contra-fichas-de-odebrecht/516470"
+            };
+            escandalos.Add(escandalo4);
+            sb.Clear();
+            sb.AppendLine("El ex procurador Alejandro Ordóñez investigado por el carrusel de nombramientos para asegurar la reelección.");
+            Propuesta escandalo5 = new Propuesta()
+            {
+                Idcandidato = 5,
+                Titulo = "El carrusel que enreda ahora al ex procurador Ordóñez",
+                Descripcion = sb.ToString(),
+                Link = "http://www.lanacion.com.co/2017/10/22/carrusel-enreda-ahora-al-ex-procurador-ordonez/"
+            };
+            escandalos.Add(escandalo5);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

@@ -31,9 +31,19 @@ namespace Elecciones.Views
             this.Children.Add(estudios);
         }
 
-        private void propuestas_Click(object sender, EventArgs e)
+        private void Propuestas_Click(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PropuestasPage((this.BindingContext as ViewModels.DetalleViewModel).Candidato));
+        }
+
+        private void Escandalos_Click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EscandalosPage((this.BindingContext as ViewModels.DetalleViewModel).Candidato));
+        }
+
+        private void Sondeo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

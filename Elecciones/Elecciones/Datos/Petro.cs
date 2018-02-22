@@ -31,6 +31,84 @@ namespace Elecciones.Datos
             };
         }
 
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("A petición de la defensa del investigado exmagistrado Leónidas Bustos, serán llamados a declarar como testigos en la Comisión de Acusación de la Cámara de Representantes los candidatos presidenciales Germán Vargas Lleras y Gustavo Petro.");
+            Propuesta escandalo5 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Cartel de la toga: Vargas Lleras, Petro y Montealegre tendran que declarar",
+                Descripcion = sb.ToString(),
+                Link = "https://www.bluradio.com/judicial/cartel-de-la-toga-vargas-lleras-petro-y-montealegre-declararan-como-testigos-164779"
+            };
+            escandalos.Add(escandalo5);
+            sb.Clear();            
+            sb.AppendLine("Gustavo Petro también enfrentó polémicas por sus propios trabajadores. Una funcionaria de la administración dijo que salía de la Alcaldía por los celos de la esposa del mandatario. Pero el escándalo más grande y que siempre lo tuvo contra las cuerdas fue el del esquema de basuras.");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Las polémicas que enfrentó el alcalde Petro durante su mandato",
+                Descripcion = sb.ToString(),
+                Link = "http://www.noticiasrcn.com/nacional-bogota/las-polemicas-enfrento-el-alcalde-petro-durante-su-mandato"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("Los contratos a dedo de la Alcaldía de Petro. Una investigación de la Contraloría capitalina encontró que entre 2012 y 2015 el 96 por ciento de los contratos de la ciudad se hicieron de forma directa y sin licitación.");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Contraloría de Bogotá encuentra fallas de corrupción",
+                Descripcion = sb.ToString(),
+                Link = "http://www.semana.com/nacion/articulo/contraloria-de-bogota-encuentra-fallas-de-corrupcion/492262"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("El debate por la inexistencia del título de doctorado del alcalde Enrique Peñalosa se convirtió en una pelea política de todos contra todos.");
+            sb.AppendLine("El periodista Melquisedec Torres asegura que Gustavo Petro también infló sus títulos académicos. El exmandatario dijo que nunca ha asegurado que sea doctor.");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Los tres títulos falsos de Gustavo Petro",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/bogota/los-tres-titulos-falsos-de-gustavo-petro-articulo-628574"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("El periodista Melquisedec Torres asegura que Gustavo Petro también infló sus títulos académicos. El exmandatario dijo que nunca ha asegurado que sea doctor.");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "En el Congreso ven en la alcaldía de Petro toda una cadena de corrupción",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/politica/el-congreso-ven-alcaldia-de-petro-toda-una-cadena-de-co-articulo-510600"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("Investigación, 850 colombianos estarían involucrados en el escándalo. Entre los nombres revelados, aparece Carlos Gutiérrez Robayo, concuñado del exalcalde de Bogotá, Gustavo Petro.");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Concuñado de Petro, salpicado por escándalo mundial de paraísos fiscales",
+                Descripcion = sb.ToString(),
+                Link = "https://noticias.caracoltv.com/mundo/concunado-de-petro-salpicado-por-escandalo-mundial-de-paraisos-fiscales-en-panama"
+            };
+            escandalos.Add(escandalo4);
+            sb.Clear();
+            sb.AppendLine("Se investiga el presunto pago de $2.000 millones en comisiones por la ampliación en tiempo de contratos de particulares en TransMilenio");
+            Propuesta escandalo6 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "Procuraduría abrió investigación a Gustavo Petro por contratación en transmilenio",
+                Descripcion = sb.ToString(),
+                Link = "https://www.larepublica.co/procuradur%C3%ADa-abri%C3%B3-investigaci%C3%B3n-gustavo-petro-por-contrataci%C3%B3n-en-transmilenio_138406"
+            };
+            escandalos.Add(escandalo6);
+            sb.Clear();
+            return escandalos;
+        }
+
         public static List<Detalle> GetEstudios()
         {
             List<Detalle> estudios = new List<Detalle>();

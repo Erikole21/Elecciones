@@ -100,7 +100,7 @@ namespace Elecciones.Datos
             sb.AppendLine("3.Asegurar el recurso humano necesario y suficiente en salud.");
             sb.AppendLine("4. Recuperar la salud pública y orientarla ala prevención.");
             sb.AppendLine("5. Desarrollar una política farmacéutica que controle el gasto.");
-            sb.AppendLine("6.Regulación efectiva del Sistema de Salud.");            
+            sb.AppendLine("6.Regulación efectiva del Sistema de Salud.");
             Propuesta propuesta = new Propuesta()
             {
                 Idcandidato = 3,
@@ -282,6 +282,63 @@ namespace Elecciones.Datos
             };
             cargos.Add(cargo3);
             return cargos;
+        }
+
+        public static List<Propuesta> GetEscandalos()
+        {
+            List<Propuesta> escandalos = new List<Propuesta>();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("El debate de control político que adelantó la congresista sobre el escándalo de Odebrecht se convirtió en una batalla de acusaciones tras la reaparición a la vida pública del exvicepresidente.");
+            Propuesta escandalo = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "El debate de Odebrecht que se volvió contra Vargas Lleras",
+                Descripcion = sb.ToString(),
+                Link = "https://www.elespectador.com/noticias/politica/el-debate-de-odebrecht-que-se-volvio-contra-vargas-lleras-articulo-718591"
+            };
+            escandalos.Add(escandalo);
+            sb.Clear();
+            sb.AppendLine("El debate en el Senado de la República por los escándalos de corrupción se convirtió en un escenario para hacer fuertes acusaciones contra el exvicepresidente Germán Vargas Lleras");
+            Propuesta escandalo1 = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "Debate sobre corrupción terminó siendo contra Germán Vargas Lleras",
+                Descripcion = sb.ToString(),
+                Link = "https://www.lafm.com.co/nacional/debate-corrupcion-termino-siendo-german-vargas/"
+            };
+            escandalos.Add(escandalo1);
+            sb.Clear();
+            sb.AppendLine("El exmandatario colombiano Álvaro Uribe, el exvicepresidente Germán Vargas Lleras y el exalcalde de Bogotá Gustavo Petro fueron llamados a declarar por el escándalo de corrupción que involucra a dos extitulares de la Corte Suprema de Justicia.");
+            Propuesta escandalo2 = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "Uribe y Vargas Lleras tendrán que declarar por caso de corrupción ",
+                Descripcion = sb.ToString(),
+                Link = "https://www.publimetro.co/co/colombia/2018/01/24/uribe-vargas-lleras-tendran-declarar-caso-corrupcion.html"
+            };
+            escandalos.Add(escandalo2);
+            sb.Clear();
+            sb.AppendLine("Desde el Congreso consideraron grave que se compruebe algún vínculo del hermano del vicepresidente en este escándalo.");
+            Propuesta escandalo3 = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "Piden investigar vínculos de familia Vargas Lleras con escándalo ",
+                Descripcion = sb.ToString(),
+                Link = "http://caracol.com.co/radio/2016/03/15/nacional/1458061324_976557.html"
+            };
+            escandalos.Add(escandalo3);
+            sb.Clear();
+            sb.AppendLine("Uno de esos procesos que, a juicio de Robledo, debería ser revisado, es el que en 2013 fue archivado contra el ex vicepresidente y hoy precandidato presidencial Germán Vargas Lleras por parapolítica");
+            Propuesta escandalo4 = new Propuesta()
+            {
+                Idcandidato = 7,
+                Titulo = "Senador Robledo pide reabrir investigación por parapolítica a Vargas lleras",
+                Descripcion = sb.ToString(),
+                Link = "https://www.bluradio.com/politica/senador-robledo-pide-reabrir-investigacion-por-parapolitica-vargas-lleras-157035"
+            };
+            escandalos.Add(escandalo4);
+            sb.Clear();
+            return escandalos;
         }
     }
 }
