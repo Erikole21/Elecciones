@@ -39,11 +39,6 @@ namespace Elecciones.Views
         private void Escandalos_Click(object sender, EventArgs e)
         {
             Navigation.PushAsync(new EscandalosPage((this.BindingContext as ViewModels.DetalleViewModel).Candidato));
-        }
-
-        private void Sondeo_Click(object sender, EventArgs e)
-        {
-
-        }
+        }       
     }
 }

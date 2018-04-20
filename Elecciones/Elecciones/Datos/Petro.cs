@@ -163,58 +163,86 @@ namespace Elecciones.Datos
         {
             List<Propuesta> propuestas = new List<Propuesta>();
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Pondremos en marcha las reformas para alcanzar una paz definitiva con equidad y libertad, reduciendo las distintas formas de desigualdad y de discriminación social. Para ello implementaremos un nuevo pacto social y político, con amplia participación de todos los sectores y ciudadanías, para superar definitivamente la guerra, para edificar una justicia autónoma y al alcance de la gente, para vencer la corrupción y procurar el buen vivir de todas y todos los colombianos");
+            sb.AppendLine("En Colombia la atención a la primera infancia, la educación de calidad, la ciencia y la cultura hoy son privilegios. Durante las últimas décadas los gobiernos aumentaron la matrícula de la educación básica en las ciudades, pero los recursos destinados a construir una sociedad del conocimiento incluyente y una paz generacional fueron priorizados para financiar la guerra. La Colombia Humana reconoce que solo las sociedades que han priorizado la formación integral de sus ciudadanos han logrado construir condiciones duraderas de desarrollo humano y de dignidad.");
             Propuesta propuesta = new Propuesta()
             {
                 Idcandidato = 2,
-                Titulo = "Superar la segregación",
+                Titulo = "1. EDUCACIÓN, CUIDADO DE LA INFANCIA Y BÚSQUEDA DE LA EQUIDAD",
                 Descripcion = sb.ToString(),
-                Link = "https://www.publimetro.co/co/noticias/2018/02/13/propuestas-gustavo-petro-presidencia-colombia-2018.html"
+                Link = "https://petro.com.co/programa-educacion/"
             };
             propuestas.Add(propuesta);
             sb.Clear();
-            sb.AppendLine("Haremos de nuestro país un territorio socialmente justo, ambientalmente sano, sustentablemente productivo, con una población que confía en sus instituciones y participa efectivamente en el fortalecimiento de la democracia y de lo público. Nuestro gobierno se orientará hacia la garantía plena de derechos y hacia el reconocimiento de nuestra diversidad poblacional, social y cultural. En esta vía, garantizaremos el derecho fundamental a la salud de manera universal y equitativa y a la educación de calidad, pluralista, universal y gratuita");
+            sb.AppendLine("En nuestro gobierno la salud será pública, gratuita, preventiva y para todas y todos sin ninguna discriminación, guiados por la ley estatutaria de salud, que resultó de un consenso entre los distintos actores del sector, en el que hay que avanzar. Nuestro modelo de salud estará dispuesto y al servicio del buen vivir de las personas y avanzaremos en la erradicación de las enfermedades y muertes evitables o por falta de atención a niñas, niños, mujeres y poblaciones más pobres. En Colombia Humana no morirán niños de hambre.");
             Propuesta propuesta1 = new Propuesta()
             {
                 Idcandidato = 2,
-                Titulo = "Fortalecimiento de lo público",
+                Titulo = "2. SALUD COMO DERECHO FUNDAMENTAL PARA EL BUEN VIVIR",
                 Descripcion = sb.ToString(),
-                Link = "https://www.publimetro.co/co/noticias/2018/02/13/propuestas-gustavo-petro-presidencia-colombia-2018.html"
+                Link = "https://petro.com.co/programa-salud/"
             };
             propuestas.Add(propuesta1);
             sb.Clear();
-            sb.AppendLine("Implementaremos cambios profundos en el modelo económico, a fin de enfrentar la crisis ambiental. Dinamizaremos la economía mediante el fortalecimiento de la agricultura, la reindustrialización de sectores estratégicos, la transición hacia energías sustentables y la generación de cambio tecnológico. Es urgente superar el extractivismo que, acompañado de la tercerización de los sectores financiero, de transporte y de servicios, ha llevado al deterioro del aparato productivo, industrial y agropecuario nacional, provocando devastación ambiental, pobreza e inequidad");
+            sb.AppendLine("La apuesta de los últimos años por un modelo extractivista aumentó la fragilidad de la economía colombiana, agravada por la caída de los precios internacionales del petróleo y el cambio en el uso de energías. A esto se suma las inequidades entre actividades productivas del campo, el creciente proceso de potrerización, monocultivos y deforestación, además de la concentración de la tierra que ha estado siempre en el centro del conflicto interno.");
             Propuesta propuesta2 = new Propuesta()
             {
                 Idcandidato = 2,
-                Titulo = "Cambio climático",
+                Titulo = "3. HACIA UNA ECONOMÍA PRODUCTIVA",
                 Descripcion = sb.ToString(),
-                Link = "https://www.publimetro.co/co/noticias/2018/02/13/propuestas-gustavo-petro-presidencia-colombia-2018.html"
+                Link = "https://petro.com.co/programa-economia/"
             };
             propuestas.Add(propuesta2);
             sb.Clear();            
-            sb.AppendLine("En materia de educación pública superior propone que sea gratuita y de calidad, y en el campo de la salud, indicó que no habría intermediación financiera que permita que “el derecho sea primero que el negocio”.");
-            sb.AppendLine("Por otro lado, en el eje económico indicó cómo pasar a una economía productiva que incluya a la población colombiana.");
-            sb.AppendLine("En cuanto a política, manifestó que la separaría de la corrupción, y la justicia sería independiente del poder político para que se dirija a la atención de los ciudadanos en materia de violación de los derechos.");
+            sb.AppendLine("Adoptaremos medidas para que la ciudadanía acceda expeditamente al sistema judicial. Garantizaremos a la población el acceso a los mecanismos de protección de los derechos fundamentales consagrados por la Constitución Política. Haremos un mayor énfasis en la ética aplicada al ejercicio del derecho, tanto en la formación académica como en el control del desempeño profesional: lo legal debe identificarse con lo ético.");            
             Propuesta propuesta3 = new Propuesta()
             {
                 Idcandidato = 2,
-                Titulo = "Educación, Salud, Economía, Justicia",
+                Titulo = "4. JUSTICIA AUTÓNOMA Y LIBRE DE PRESIONES POLÍTICAS",
                 Descripcion = sb.ToString(),
-                Link = "https://www.bluradio.com/politica/las-propuestas-de-petro-en-educacion-economia-salud-y-justicia-167464"
+                Link = "https://petro.com.co/programa-justicia/"
             };
             propuestas.Add(propuesta3);
             sb.Clear();
-            sb.AppendLine("En mi gobierno prohibiré el Fracking");            
+            sb.AppendLine("Para impedir que el miedo y la desconfianza sigan inmovilizando al pueblo colombiano y perpetuando en el poder a quienes por siglos nos han dominado, debemos limpiar la política de la corrupción. La política debe dejar de ser un negocio en que los corruptos invierten para ganar poder a costa de la necesidad del pueblo. La política debe ser el ejercicio del poder de la ciudadanía, debe ser el vehículo para que la gente pueda satisfacer sus necesidades colectivas. En nuestro gobierno los corruptos además de ir a cárcel deberán devolver los dineros que se hayan robado de las finanzas públicas.");            
             Propuesta propuesta4 = new Propuesta()
             {
                 Idcandidato = 2,
-                Titulo = "Fracking",
+                Titulo = "5. POR UNA POLÍTICA LIBRE DE CORRUPCIÓN",
                 Descripcion = sb.ToString(),
-                Link = "http://www.eltiempo.com/elecciones-colombia-2018/presidenciales/claudia-palacios-entrevista-a-gustavo-petro-en-mejor-hablemos-180020"
+                Link = "https://petro.com.co/programa-politica/"
             };
             propuestas.Add(propuesta4);
-            sb.Clear();            
+            sb.Clear();
+            sb.AppendLine("La lucha contra la discriminación y la segregación social de un país pasa por reconocer la diversidad de sus ciudadanías y así poder implementar políticas afirmativas que, con la voz de todas y todos, garanticen la inclusión social y la participación efectiva.");
+            Propuesta propuesta5 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "6. UN PAÍS DIVERSO Y MULTICOLOR QUE SUPERA LA DISCRIMINACIÓN",
+                Descripcion = sb.ToString(),
+                Link = "https://petro.com.co/programa-pais-diverso/"
+            };
+            propuestas.Add(propuesta5);
+            sb.Clear();
+            sb.AppendLine("La lucha contra la discriminación y la segregación social de un país pasa por reconocer la diversidad de sus ciudadanías y así poder implementar políticas afirmativas que, con la voz de todas y todos, garanticen la inclusión social y la participación efectiva.");
+            Propuesta propuesta6 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "7. RELACIONES INTERNACIONALES PARA LA SEGURIDAD HUMANA Y LA PAZ",
+                Descripcion = sb.ToString(),
+                Link = "https://petro.com.co/programa-relaciones-internacionales/"
+            };
+            propuestas.Add(propuesta6);
+            sb.Clear();
+            sb.AppendLine("Establecer reforma tributaria para la equidad., Gasto público transparente, eficiente y participativo., Sostenibilidad fiscal basada en productividad, transparencia y eficiencia, Descentralización con recursos");
+            Propuesta propuesta7 = new Propuesta()
+            {
+                Idcandidato = 2,
+                Titulo = "8. PILARES DE LA POLÍTICA ECONÓMICA DE COLOMBIA HUMANA",
+                Descripcion = sb.ToString(),
+                Link = "https://petro.com.co/programa-pilares-politica-economica/"
+            };
+            propuestas.Add(propuesta7);            
+            sb.Clear();
             return propuestas;
         }
 

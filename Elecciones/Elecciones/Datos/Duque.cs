@@ -82,6 +82,26 @@ namespace Elecciones.Datos
             };
             escandalos.Add(escandalo4);
             sb.Clear();
+            sb.AppendLine("En el aire queda la duda sobre los estudios del candidato presidencial del uribismo, Iván Duque, luego de que a través de redes sociales se generara una polémica que cuestiona una supuesta especialización que habría cursado en Harvard.");
+            Propuesta escandalo5 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Presuntos estudios falsos de Duque",
+                Descripcion = sb.ToString(),
+                Link = "https://www.lafm.com.co/politica/polemica-por-supuesta-especializacion-de-ivan-duque-en-harvard/"
+            };
+            escandalos.Add(escandalo5);
+            sb.Clear();
+            sb.AppendLine("Ambos involucrados en el escándalo de Odebrecht. Las conjeturas de algunos partidarios de la izquierda están relacionadas con el hecho de que Duque también habría recibido dinero de Odebrecht y con estos recursos habría comprado un apartamento en el distrito de Columbia.");
+            Propuesta escandalo6 = new Propuesta()
+            {
+                Idcandidato = 4,
+                Titulo = "Apartamento comprado por Duque en EEUU",
+                Descripcion = sb.ToString(),
+                Link = "http://www.eluniversal.com.co/colombia/crece-polemica-por-apartamento-que-habria-comprado-ivan-duque-en-eeuu-275189"
+            };
+            escandalos.Add(escandalo6);
+            sb.Clear();
             return escandalos;
         }
 

@@ -19,17 +19,9 @@ namespace Elecciones.Datos
                 case 3:
                     return LLeras.GetBiografia();
                 case 4:
-                    return Duque.GetBiografia();
-                case 5:
-                    return Ordonez.GetBiografia();
+                    return Duque.GetBiografia();                
                 case 6:
-                    return Calle.GetBiografia();
-                case 7:
-                    return Marta.GetBiografia();
-                case 8:
-                    return Timo.GetBiografia();
-                case 9:
-                    return Piedad.GetBiografia();
+                    return Calle.GetBiografia();                                                
                 default:
                     return null;
             }
@@ -46,17 +38,9 @@ namespace Elecciones.Datos
                 case 3:
                     return LLeras.GetEstudios();
                 case 4:
-                    return Duque.GetEstudios();
-                case 5:
-                    return Ordonez.GetEstudios();
+                    return Duque.GetEstudios();                
                 case 6:
-                    return Calle.GetEstudios();
-                case 7:
-                    return Marta.GetEstudios();
-                case 8:
-                    return Timo.GetEstudios();
-                case 9:
-                    return Piedad.GetEstudios();
+                    return Calle.GetEstudios();                                                
                 default:
                     return null;
             }
@@ -73,17 +57,9 @@ namespace Elecciones.Datos
                 case 3:
                     return LLeras.GetEscandalos();
                 case 4:
-                    return Duque.GetEscandalos();
-                case 5:
-                    return Ordonez.GetEscandalos();
+                    return Duque.GetEscandalos();                
                 case 6:
-                    return Calle.GetEscandalos();
-                case 7:
-                    return Marta.GetEscandalos();
-                case 8:
-                    return Timo.GetEscandalos();
-                case 9:
-                    return Piedad.GetEscandalos();
+                    return Calle.GetEscandalos();                                
                 default:
                     return null;
             }
@@ -101,17 +77,9 @@ namespace Elecciones.Datos
                 case 3:
                     return LLeras.GetPropuestas();
                 case 4:
-                    return Duque.GetPropuestas();
-                case 5:
-                    return Ordonez.GetPropuestas();
+                    return Duque.GetPropuestas();                
                 case 6:
-                    return Calle.GetPropuestas();
-                case 7:
-                    return Marta.GetPropuestas();
-                case 8:
-                    return Timo.GetPropuestas();
-                case 9:
-                    return Piedad.GetPropuestas();
+                    return Calle.GetPropuestas();                                                
                 default:
                     return null;
             }
@@ -128,17 +96,9 @@ namespace Elecciones.Datos
                 case 3:
                     return LLeras.GetCargos();
                 case 4:
-                    return Duque.GetCargos();
-                case 5:
-                    return Ordonez.GetCargos();
+                    return Duque.GetCargos();                
                 case 6:
-                    return Calle.GetCargos();
-                case 7:
-                    return Marta.GetCargos();
-                case 8:
-                    return Timo.GetCargos();
-                case 9:
-                    return Piedad.GetCargos();
+                    return Calle.GetCargos();                
                 default:
                     return null;
             }
@@ -172,17 +132,6 @@ namespace Elecciones.Datos
                 Slogan = "Colombia Humana"
             };
             candidatos.Add(petro);
-            Candidato lleras = new Candidato()
-            {
-                Id = 3,
-                Nombre = "Germán Vargas Lleras",
-                Foto = ImageSource.FromResource("Elecciones.Imagenes.LLeras.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1962, 2, 19)).TotalDays / 365) } Años",
-                Origen = "Bogotá",
-                PartidoPolitico = "Cambio Radical",
-                Slogan = "Mejor Vargas Lleras"
-            };
-            candidatos.Add(lleras);
             Candidato duque = new Candidato()
             {
                 Id = 4,
@@ -194,61 +143,28 @@ namespace Elecciones.Datos
                 Slogan = "Centro Democrático"
             };
             candidatos.Add(duque);
-            Candidato ordonez = new Candidato()
+            Candidato lleras = new Candidato()
             {
-                Id = 5,
-                Nombre = "Alejandro Ordóñez Maldonado",
-                Foto = ImageSource.FromResource("Elecciones.Imagenes.Ordonez.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1955, 5, 29)).TotalDays / 365) } Años",
-                Origen = "Bucaramanga, Santander",
-                PartidoPolitico = "",
-                Slogan = "La patria de pie"
+                Id = 3,
+                Nombre = "Germán Vargas Lleras",
+                Foto = ImageSource.FromResource("Elecciones.Imagenes.LLeras.jpg", typeof(Repositorio).Assembly),
+                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1962, 2, 19)).TotalDays / 365) } Años",
+                Origen = "Bogotá",
+                PartidoPolitico = "Cambio Radical",
+                Slogan = "Mejor Vargas Lleras"
             };
-            candidatos.Add(ordonez);
+            candidatos.Add(lleras);           
             Candidato calle = new Candidato()
             {
                 Id = 6,
                 Nombre = "Humberto de la Calle Lombana",
                 Foto = ImageSource.FromResource("Elecciones.Imagenes.Calle.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ DateTime.Now.Subtract(new DateTime(1946, 7, 14)).TotalDays / 365 } Años",
+                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1946, 7, 14)).TotalDays / 365) } Años",
                 Origen = "Manzanares, Caldas",
                 PartidoPolitico = "Liberal",
                 Slogan = ""
             };
-            candidatos.Add(calle);
-            Candidato marta = new Candidato()
-            {
-                Id = 7,
-                Nombre = "Marta Lucía Ramírez Blanco",
-                Foto = ImageSource.FromResource("Elecciones.Imagenes.Marta.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1954, 7, 4)).TotalDays / 365) } Años",
-                Origen = "Zipaquirá",
-                PartidoPolitico = "Conservador",
-                Slogan = "Por una Colombia Honesta y Fuerte Marta Lucía"
-            };
-            candidatos.Add(marta);
-            Candidato timo = new Candidato()
-            {
-                Id = 8,
-                Nombre = "Rodrigo Londoño Echeverri",
-                Foto = ImageSource.FromResource("Elecciones.Imagenes.Timo.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1959, 1, 20)).TotalDays / 365) } Años",
-                Origen = "La Tebaida, Quindío",
-                PartidoPolitico = "Fuerza Alternativa Revolucionaria del Común",
-                Slogan = "FARC"
-            };
-            candidatos.Add(timo);
-            Candidato piedad = new Candidato()
-            {
-                Id = 9,
-                Nombre = "Piedad Esneda Córdoba Ruíz",
-                Foto = ImageSource.FromResource("Elecciones.Imagenes.Piedad.jpg", typeof(Repositorio).Assembly),
-                Edad = $"{ Math.Floor(DateTime.Now.Subtract(new DateTime(1955, 1, 25)).TotalDays / 365) } Años",
-                Origen = "Medellín",
-                PartidoPolitico = "Poder Ciudadano Siglo XXI",
-                Slogan = "Poder Ciudadano"
-            };
-            candidatos.Add(piedad);
+            candidatos.Add(calle);            
 
             return candidatos;
         }

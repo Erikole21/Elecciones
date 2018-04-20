@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Contr="clr-namespace:Elecciones.Controles;assembly=Elecciones"
+             x:Class="Elecciones.Views.SondePage" Title="Sondeo Virtual">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ItemCandidato">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Margin="1">
+                        <Image Source="{Binding Foto}" Aspect="AspectFill" 
+                               HeightRequest ="80" WidthRequest="80"/>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Nombre}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Cantidad}" FontSize="18" FontAttributes="Bold" TextColor="Blue" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="guardar" Order="Primary" Clicked="Guardar_Click" Text="Guardar" Priority="1" />
+        <ToolbarItem Name="guardar" Order="Primary" Icon="Guardar.png"  Clicked="Guardar_Click" Text="Guardar" Priority="2" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid  RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="15" Margin="5">Seleccione por quien va a votar y guarde.</Label>
+                <Label Margin="5" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="12">Cuando guarde se almacenara su voto y solo se podra realizar un voto por dispositivo movil, si se decide por otro candidato puede cambiarlo hasta 3 veces, lo cual le restara un voto a su candidato inicial y se lo sumara a su nuevo candidato</Label>
+            </StackLayout>
+            <ListView Grid.Row="1" HasUnevenRows="True" ItemTemplate="{StaticResource ItemCandidato}" ItemSelected="listView_ItemSelected" ItemsSource="{Binding Candidatos}"/>
+            <Contr:AdControlView Grid.Row="2" AdUnitId="{Binding IdBanner}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

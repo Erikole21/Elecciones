@@ -4,7 +4,6 @@
              x:Class="Elecciones.Views.DetallesTabPage">
     <TabbedPage.ToolbarItems>
         <ToolbarItem Name="propuestas" Order="Primary" Icon="Propuestas.png"  Clicked="Propuestas_Click" Text="Propuestas" Priority="0" />
-        <ToolbarItem Name="Escandalos" Order="Primary" Icon="Escandalos.png"  Clicked="Escandalos_Click" Text="Escandalos" Priority="1" />
-        <!--<ToolbarItem Name="Sondeo" Order="Primary" Icon="Sondeo.png"  Clicked="Sondeo_Click" Text="Sondeo" Priority="2" />-->
+        <ToolbarItem Name="Escandalos" Order="Primary" Icon="Escandalos.png"  Clicked="Escandalos_Click" Text="Escandalos" Priority="1" />        
     </TabbedPage.ToolbarItems>
 </TabbedPage>
