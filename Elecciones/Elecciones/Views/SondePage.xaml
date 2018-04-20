@@ -20,8 +20,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="guardar" Order="Primary" Clicked="Guardar_Click" Text="Guardar" Priority="1" />
-        <ToolbarItem Name="guardar" Order="Primary" Icon="Guardar.png"  Clicked="Guardar_Click" Text="Guardar" Priority="2" />
+        <ToolbarItem Name="guardar" Order="Primary" Clicked="Guardar_Click" Text="Guardar" Priority="0" />
+        <ToolbarItem Name="guardar" Order="Primary" Icon="Guardar.png"  Clicked="Guardar_Click" Text="Guardar" Priority="1" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid  RowSpacing="0">
