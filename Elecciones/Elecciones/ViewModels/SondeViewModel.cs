@@ -115,6 +115,9 @@ namespace Elecciones.ViewModels
                 foreach (var senso in sensos)
                 {
                     candidato = candidatosApp.FirstOrDefault(c => c.Id == senso.IdCandidato);
+                    if (senso.Cantidad > 0)
+                        senso.Porcentaje = string.Format("{0} %", Math.Round(((Convert.ToDecimal(senso.Cantidad) / Convert.ToDecimal(sensos.Sum(c => c.Cantidad))) * 100), 2));
+                    senso.DescripcionCantidad = string.Format("{0} Votos", senso.Cantidad);
                     senso.Foto = candidato.Foto;
                     senso.Nombre = candidato.Nombre;
                 }

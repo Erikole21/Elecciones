@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Elecciones.Views.DetallesTabPage">
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Name="propuestas" Order="Primary" Icon="Propuestas.png"  Clicked="Propuestas_Click" Text="Propuestas" Priority="0" />
-        <ToolbarItem Name="Escandalos" Order="Primary" Icon="Escandalos.png"  Clicked="Escandalos_Click" Text="Escandalos" Priority="1" />        
+        <ToolbarItem Name="propuestas" Order="Primary" Clicked="Propuestas_Click" Text="Propuestas" Priority="0" />
+        <ToolbarItem Name="propuestas" Order="Primary" Icon="Propuestas.png"  Clicked="Propuestas_Click" Text="Propuestas" Priority="1" />
+        <ToolbarItem Name="Escandalos" Order="Primary"  Clicked="Escandalos_Click" Text="Escandalos" Priority="2" />
+        <ToolbarItem Name="Escandalos" Order="Primary" Icon="Escandalos.png"  Clicked="Escandalos_Click" Text="Escandalos" Priority="3" />        
     </TabbedPage.ToolbarItems>
 </TabbedPage>

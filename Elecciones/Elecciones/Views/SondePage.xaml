@@ -12,7 +12,8 @@
                                HeightRequest ="80" WidthRequest="80"/>
                         <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Nombre}" FontSize="15" FontAttributes="Bold"/>
-                            <Label Text="{Binding Cantidad}" FontSize="18" FontAttributes="Bold" TextColor="Blue" />
+                            <Label Text="{Binding DescripcionCantidad}" FontSize="18" FontAttributes="Bold" TextColor="Blue" />
+                            <Label Text="{Binding Porcentaje}" FontSize="17" FontAttributes="Bold" TextColor="Blue" />
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>
