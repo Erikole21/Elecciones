@@ -10,12 +10,7 @@
     <None Remove="Imagenes\Duque.jpg" />
     <None Remove="Imagenes\Fajardo.jpg" />
     <None Remove="Imagenes\LLeras.jpg" />
-    <None Remove="Imagenes\Marta.jpg" />
-    <None Remove="Imagenes\Ordonez.jpg" />
     <None Remove="Imagenes\Petro.jpg" />
-    <None Remove="Imagenes\Piedad.jpg" />
-    <None Remove="Imagenes\Propuestas.png" />
-    <None Remove="Imagenes\Timo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,17 +18,13 @@
     <EmbeddedResource Include="Imagenes\Duque.jpg" />
     <EmbeddedResource Include="Imagenes\Fajardo.jpg" />
     <EmbeddedResource Include="Imagenes\LLeras.jpg" />
-    <EmbeddedResource Include="Imagenes\Marta.jpg" />
-    <EmbeddedResource Include="Imagenes\Ordonez.jpg" />
     <EmbeddedResource Include="Imagenes\Petro.jpg" />
-    <EmbeddedResource Include="Imagenes\Piedad.jpg" />
-    <EmbeddedResource Include="Imagenes\Propuestas.png" />
-    <EmbeddedResource Include="Imagenes\Timo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="6.5.0" />
     <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.1.1" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="3.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
   </ItemGroup>

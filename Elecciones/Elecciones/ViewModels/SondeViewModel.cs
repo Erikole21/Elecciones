@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Linq;
 using Acr.UserDialogs;
+using Plugin.Connectivity;
 
 namespace Elecciones.ViewModels
 {
@@ -77,16 +78,21 @@ namespace Elecciones.ViewModels
         {
             if (CandidatoSeleccionado != null && IsDevice)
             {
-                bool voto = await VotarAzure();
-                if (voto)
+                if (CrossConnectivity.Current.IsConnected)
                 {
-                    Notificar("Voto guardado correctamente, Comparte la APP para tener mas votos!!");
-                    ConsultarSenso();
+                    bool voto = await VotarAzure();
+                    if (voto)
+                    {
+                        Notificar("Voto guardado correctamente, Comparte la APP para tener mas votos!!");
+                        ConsultarSenso();
+                    }
+                    else
+                    {
+                        Mensaje("No fue posible conectar con el servidor, intente de nuevo.");
+                    }
                 }
                 else
-                {
-                    Mensaje("No fue posible conectar con el servidor, intente de nuevo.");
-                }
+                    Mensaje("Esta opción necesita conexion a internet, Revise conexión e intente de nuevo");
             }
             else
             {
@@ -106,24 +112,34 @@ namespace Elecciones.ViewModels
 
         public async void ConsultarSenso()
         {
-            using (IProgressDialog progress = UserDialogs.Instance.Loading("Consultando Votos..", null, null, true, MaskType.Black))
+            if (CrossConnectivity.Current.IsConnected)
             {
-
-                List<Candidato> candidatosApp = Repositorio.GetCandidatos();
-                List<Senso> sensos = await ConsultarSensoAzure();
-                Candidato candidato;
-                foreach (var senso in sensos)
+                using (IProgressDialog progress = UserDialogs.Instance.Loading("Consultando Votos..", null, null, true, MaskType.Black))
                 {
-                    candidato = candidatosApp.FirstOrDefault(c => c.Id == senso.IdCandidato);
-                    if (senso.Cantidad > 0)
-                        senso.Porcentaje = string.Format("{0} %", Math.Round(((Convert.ToDecimal(senso.Cantidad) / Convert.ToDecimal(sensos.Sum(c => c.Cantidad))) * 100), 2));
-                    senso.DescripcionCantidad = string.Format("{0} Votos", senso.Cantidad);
-                    senso.Foto = candidato.Foto;
-                    senso.Nombre = candidato.Nombre;
-                }
 
-                Candidatos = new ObservableCollection<Senso>(sensos.OrderByDescending(s => s.Cantidad));
+                    List<Candidato> candidatosApp = Repositorio.GetCandidatos();
+                    List<Senso> sensos = await ConsultarSensoAzure();
+                    if (sensos != null)
+                    {
+                        Candidato candidato;
+                        foreach (var senso in sensos)
+                        {
+                            candidato = candidatosApp.FirstOrDefault(c => c.Id == senso.IdCandidato);
+                            if (senso.Cantidad > 0)
+                                senso.Porcentaje = string.Format("{0} %", Math.Round(((Convert.ToDecimal(senso.Cantidad) / Convert.ToDecimal(sensos.Sum(c => c.Cantidad))) * 100), 2));
+                            senso.DescripcionCantidad = string.Format("{0} Votos", senso.Cantidad);
+                            senso.Foto = candidato.Foto;
+                            senso.Nombre = candidato.Nombre;
+                        }
+
+                        Candidatos = new ObservableCollection<Senso>(sensos.OrderByDescending(s => s.Cantidad));
+                    }
+                    else
+                        Mensaje("No fue posible conectar con el servidor, intente de nuevo.");
+                }
             }
+            else
+                Mensaje("Esta opción necesita conexion a internet, Revise conexión e intente de nuevo");
         }
 
         public async Task<List<Senso>> ConsultarSensoAzure()

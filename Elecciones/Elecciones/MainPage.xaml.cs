@@ -1,4 +1,6 @@
-﻿using Elecciones.Modelos;
+﻿using Acr.UserDialogs;
+using Elecciones.Modelos;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +15,18 @@ namespace Elecciones
         public MainPage()
         {
             InitializeComponent();
-            this.Appearing += MainPage_Appearing;            
+            this.Appearing += MainPage_Appearing;
         }
 
         private void TapSondeo_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Views.SondePage());
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                Navigation.PushAsync(new Views.SondePage());
+            }
+            else
+                UserDialogs.Instance.Alert(new AlertConfig() { Message = "Esta opción necesita conexion a internet, Revise conexión e intente de nuevo", Title = "Elecciones" });
+
         }
 
         private void MainPage_Appearing(object sender, EventArgs e)
@@ -28,7 +36,7 @@ namespace Elecciones
 
         private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem !=null)
+            if (e.SelectedItem != null)
             {
                 Candidato _candidato = e.SelectedItem as Candidato;
                 Candidato candidato = new Candidato()
@@ -43,7 +51,7 @@ namespace Elecciones
                 };
                 //para evitar q se quede seleccionada un candidato
                 Navigation.PushAsync(new Views.DetallesTabPage(candidato));
-            }            
-        }        
+            }
+        }
     }
 }
